@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\api\CollaboratorController;
 use App\Http\Controllers\api\EmployeeController;
 use Illuminate\Support\Facades\Route;
 
@@ -19,3 +20,4 @@ Route::patch('/employees/{id}', [EmployeeController::class, 'update']);
 Route::get('/employees/', [EmployeeController::class, 'index']);
 Route::post('/employees/', [EmployeeController::class, 'store']);
 
+Route::get('/collaborators/', [CollaboratorController::class, 'index']);
