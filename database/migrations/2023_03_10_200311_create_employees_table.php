@@ -18,7 +18,7 @@ return new class extends Migration
             $table->string('cpf')->unique();
             $table->string('phone')->nullable();
             $table->string('knowledge');
-            $table->enum('status', ['validated','not_validated']);
+            $table->enum('status', ['','validated','not_validated']);
             $table->timestamps();
         });
     }
