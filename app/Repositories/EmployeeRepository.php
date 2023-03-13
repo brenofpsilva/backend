@@ -14,12 +14,12 @@ class EmployeeRepository implements EmployeeInterface
      */
     public function getAllEmployees()
     {
-        return Employee::orderBy('name', 'asc')->paginate();
+        return Employee::orderBy('name', 'asc')->get();
     }
 
-    public function findEmployee(int $id): Employee
+    public function findEmployee(int $id)
     {
-        return Employee::findOrFail($id);
+        return Employee::find($id);
     }
 
     /**

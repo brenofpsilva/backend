@@ -93,4 +93,11 @@ class EmployeeController extends Controller
             ], 400);
         }
     }
+
+    public function show(string $nome)
+    {
+        $id = preg_replace("/[^0-9]/", "", $nome);
+        $employees = $this->employeeRepository->findEmployee($id);
+        return new EmployeeResource($employees);
+    }
 }

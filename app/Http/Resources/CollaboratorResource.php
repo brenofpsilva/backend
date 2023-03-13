@@ -15,8 +15,9 @@ class CollaboratorResource extends JsonResource
     public function toArray(Request $request): array
     {
         return [
-            'uuid' => $this->uuid,
+            'uuid' => str_replace('-','',$this->uuid),
             'name' => $this->name,
+            'slug' => str_replace(' ','',strtolower($this->name)),
         ];
     }
 }

@@ -17,6 +17,7 @@ use Illuminate\Support\Facades\Route;
 
 
 Route::patch('/employees/{id}', [EmployeeController::class, 'update']);
+Route::get('/employees/{any}', [EmployeeController::class, 'show']);
 Route::get('/employees/', [EmployeeController::class, 'index']);
 Route::post('/employees/', [EmployeeController::class, 'store']);
 
